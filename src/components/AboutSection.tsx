@@ -1,0 +1,118 @@
+"use client";
+
+import React from "react";
+import { Heart, Gift, Award, MapPin, CheckCircle2 } from "lucide-react";
+import { CAMPAIGN_INFO } from "@/data/campaign";
+
+export default function AboutSection() {
+  const { charityGoal } = CAMPAIGN_INFO;
+
+  return (
+    <>
+      {/* Section 1: Câu chuyện của chúng mình */}
+      <section id="about" className="w-full overflow-hidden border-y border-[var(--brand-border)] bg-[var(--brand-surface-alt)] px-5 py-16 md:px-10 lg:py-24">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
+          <div>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-[#df8143]">
+              Câu chuyện của chúng mình
+            </p>
+            <h2 className="text-3xl sm:text-5xl font-bold leading-tight text-[var(--brand-heading)] tracking-tight font-serif">
+              Hành trình dòng nước<br />
+              <em className="font-normal italic text-[#df8143]">về nguồn yêu thương.</em>
+            </h2>
+          </div>
+
+          <div className="space-y-4 text-sm sm:text-base leading-relaxed text-[var(--brand-muted)]">
+            <p>
+              Chiến dịch <strong>&ldquo;Hành Trình Dòng Nước Về Nguồn&rdquo;</strong> được khởi xướng bởi nhóm sinh viên The Boys (Đại học FPT TP.HCM) với tâm nguyện tri ân thế hệ đi trước — những người lính đã hiến dâng thanh xuân và thân thể cho độc lập dân tộc.
+            </p>
+            <p>
+              Toàn bộ nguồn lực thu được từ việc bán đồ ăn vặt, cafe, hoa và các combo workshop lưu niệm sẽ được phối hợp cùng Câu lạc bộ đồng hành để thực hiện chương trình thăm hỏi, tri ân các cô chú thương binh nặng.
+            </p>
+            <div className="grid grid-cols-2 gap-4 pt-3 sm:grid-cols-4">
+              <div className="rounded-2xl border border-[var(--brand-border)] bg-[var(--brand-surface)] p-3 text-center">
+                <p className="text-base sm:text-lg font-extrabold text-[#df8143]">The Boys x CLB</p>
+                <p className="text-xs text-[var(--brand-muted)]">Đơn vị phối hợp</p>
+              </div>
+              <div className="rounded-2xl border border-[var(--brand-border)] bg-[var(--brand-surface)] p-3 text-center">
+                <p className="text-base sm:text-lg font-extrabold text-[#315444]">Sinh viên FPT</p>
+                <p className="text-xs text-[var(--brand-muted)]">Cơ sở TP.HCM</p>
+              </div>
+              <div className="rounded-2xl border border-[var(--brand-border)] bg-[var(--brand-surface)] p-3 text-center">
+                <p className="text-xl sm:text-2xl font-extrabold text-[#df8143]">13/10</p>
+                <p className="text-xs text-[var(--brand-muted)]">Ngày mở bán</p>
+              </div>
+              <div className="rounded-2xl border border-[var(--brand-border)] bg-[var(--brand-surface)] p-3 text-center">
+                <p className="text-xl sm:text-2xl font-extrabold text-[#315444]">17/10</p>
+                <p className="text-xs text-[var(--brand-muted)]">Workshop chính</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 2: Nơi chúng mình sẽ đến (Hành trình) */}
+      <section id="journey" className="w-full overflow-hidden bg-[#315444] px-5 py-16 text-[#f8f5ef] md:px-10 lg:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="text-center md:text-left">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-[#e6b057]">
+              Sứ mệnh thiện nguyện
+            </p>
+            <h2 className="text-3xl sm:text-5xl font-bold leading-tight tracking-tight font-serif">
+              Một buổi sống cùng anh hùng<br />
+              <em className="font-normal italic text-[#e6b057]">trong thời bình.</em>
+            </h2>
+            <p className="mt-5 max-w-2xl text-sm sm:text-base leading-relaxed text-[#c1d0c4]">
+              {charityGoal.targetAudience}
+            </p>
+          </div>
+
+          {/* Các giá trị cốt lõi của chuyến đi */}
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { title: "Sẻ chia chân thành", desc: "Gửi tặng những phần quà thăm hỏi, động viên tinh thần đến các cô chú." },
+              { title: "Tri ân cội nguồn", desc: "Lắng nghe và ghi nhớ những cống hiến to lớn của thế hệ đi trước." },
+              { title: "Trách nhiệm người trẻ", desc: "Lan tỏa lối sống đẹp, tinh thần biết ơn trong cộng đồng sinh viên." },
+              { title: "Gắn kết đồng hành", desc: "Sự chung tay phối hợp chặt chẽ giữa The Boys và Câu lạc bộ đồng hành." },
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                className="flex flex-col justify-between rounded-2xl bg-white/10 p-5 backdrop-blur-sm border border-white/10"
+              >
+                <div>
+                  <span className="flex size-8 items-center justify-center rounded-full bg-[#e6b057]/20 text-[#e6b057] mb-3">
+                    <Heart className="size-4" />
+                  </span>
+                  <p className="font-bold text-white text-base">{item.title}</p>
+                </div>
+                <p className="mt-2 text-xs leading-relaxed text-[#c1d0c4]">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Hoạt động trong ngày */}
+          <div className="mt-10 rounded-3xl border border-white/20 bg-white/5 p-6 sm:p-8 backdrop-blur-md">
+            <h3 className="text-lg font-bold text-[#e6b057] flex items-center gap-2">
+              <Award className="size-5" />
+              Chương trình hoạt động 1 ngày tri ân:
+            </h3>
+            <ul className="mt-4 space-y-2.5 text-sm text-[#e1ece4]">
+              <li className="flex items-start gap-2.5">
+                <CheckCircle2 className="size-4 shrink-0 text-[#e6b057] mt-0.5" />
+                <span>Thăm hỏi, sinh hoạt ngoài trời và lắng nghe những câu chuyện lịch sử hào hùng từ nhân chứng sống.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <CheckCircle2 className="size-4 shrink-0 text-[#e6b057] mt-0.5" />
+                <span>Phối hợp cùng Câu lạc bộ trao gửi các phần quà thăm hỏi sức khỏe đến các cô chú.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <CheckCircle2 className="size-4 shrink-0 text-[#e6b057] mt-0.5" />
+                <span>Giao lưu, chia sẻ và gửi gắm những tình cảm tri ân ấm áp nhất của thế hệ trẻ.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
