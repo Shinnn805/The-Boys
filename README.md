@@ -188,7 +188,7 @@ TheBoys/
 
 ```bash
 # Clone dự án từ GitHub
-git clone https://github.com/Nguyen-Van-Gia-Binh/The-Boys.git
+git clone https://github.com/Shinnn805/The-Boys.git
 
 # Di chuyển vào thư mục dự án
 cd The-Boys
@@ -239,13 +239,9 @@ Dự án đã được triển khai tự động qua **Vercel**:
 
 <div align="center">
 
-### Nguyễn Văn Gia Bình
-**Lead Full-Stack Developer** · Đại học FPT TP.HCM
+### Âu Quốc Kim Sinh
+**IC DESIGN STUDENT** · Đại học FPT TP.HCM
 
-[![GitHub](https://img.shields.io/badge/GitHub-Nguyen--Van--Gia--Binh-181717?style=for-the-badge&logo=github)](https://github.com/Nguyen-Van-Gia-Binh)
-[![Email](https://img.shields.io/badge/Email-nguyenvangiabinh22072006@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nguyenvangiabinh22072006@gmail.com)
-
-<br/>
 
 *Dự án phi lợi nhuận hướng tới cộng đồng nhân dịp 20/10*  
 **The Boys Project · Đại học FPT TP.HCM · 2026**
